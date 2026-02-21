@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <a name="readme-top"></a>
 
 # Modern 3D Portfolio using React, Three.js and Typescript
@@ -267,3 +268,7 @@ You can also give this repository a star to show more people and they can use th
 
 <br />
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+=======
+# Dyanamic_web_works
+Portpolio website for our new agency Dyanamic Web Works
+>>>>>>> c2feee3a3341735775d053d38f498b88ad9642b1
