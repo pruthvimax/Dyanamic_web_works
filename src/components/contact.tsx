@@ -98,7 +98,7 @@ export const Contact = () => {
         import.meta.env.VITE_APP_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "Shubham",
+          to_name: "DWW",
           from_email: form.email.trim().toLowerCase(),
           to_email: import.meta.env.VITE_APP_EMAILJS_RECIEVER,
           message: form.message,
@@ -147,7 +147,7 @@ export const Contact = () => {
                 id="name"
                 value={form.name}
                 onChange={handleChange}
-                placeholder="John Doe"
+                placeholder="Enter Your Name"
                 title="What's your name?"
                 disabled={loading}
                 aria-disabled={loading}
@@ -169,7 +169,7 @@ export const Contact = () => {
                 id="email"
                 value={form.email}
                 onChange={handleChange}
-                placeholder="johndoe@email.com"
+                placeholder="your_mail_name@email.com"
                 title="What's your email?"
                 disabled={loading}
                 aria-disabled={loading}
