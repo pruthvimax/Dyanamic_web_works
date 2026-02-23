@@ -95,7 +95,7 @@ export const Works = () => {
       <>
         {/* Title */}
         <motion.div variants={textVariant()}>
-          <p className={styles.sectionSubText}>My Work</p>
+          <p className={styles.sectionSubText}>Our Works</p>
           <h2 className={styles.sectionHeadText}>Projects.</h2>
         </motion.div>
 

@@ -54,11 +54,8 @@ export const About = () => {
           variants={fadeIn(undefined, undefined, 0.1, 1)}
           className="empty-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          I'm a skilled website developer with experience in TypeScript and
-          Javascript, and expertise in frameworks like React, Node.js, and
-          Three.js. I'm a quick learner and collaborate closely with clients to
-          create efficient, scalable, and user-friendly solutions that solve
-          real-world problems. Let's work together to bring your ideas to life!
+         Transform your ideas into impactful products.
+          We build scalable websites and powerful mobile apps using modern tech (React, Node.js) to accelerate your digital growth.
         </motion.p>
 
         {/* Service Card */}

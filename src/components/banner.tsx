@@ -1,6 +1,4 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
-
 import { close, bulb } from "../assets";
 
 type BannerProps = {
@@ -21,7 +19,7 @@ const Banner = ({ hide, setHide }: BannerProps) => {
     }, 5000);
 
     return () => clearTimeout(bannerTimer);
-  }, []);
+  }, [setHide]);
 
   const handleBannerClose = () => {
     setHide(true);
@@ -30,49 +28,30 @@ const Banner = ({ hide, setHide }: BannerProps) => {
 
   return (
     <div
-      id="sticky-banner"
-      tabIndex={-1}
       className={`${
-        hide ? "hidden" : "block"
-      } absolute h-20 top-0 left-0 z-50 flex justify-between w-full p-4 bg-primary shadow-md opacity-[0.98]`}
+        hide ? "hidden" : "flex"
+      } fixed top-0 left-0 w-full h-16 z-50 items-center justify-between px-6 bg-primary shadow-md`}
     >
-      <div className="flex items-center mx-auto">
-        <p className="flex items-center text-sm font-normal text-gray-500 ">
-          <span className="inline-flex p-1 mr-3 bg-gray-200 rounded-full ">
-            <img
-              src={bulb}
-              alt="bulb"
-              height={12}
-              width={12}
-              className="text-gray-500"
-            />
-            <span className="sr-only">Light bulb</span>
-          </span>
-          <span>
-            Where Tech Meet Business{" "}
-            <Link
-              to="https://www.sanidhyy.name"
-              target="_blank"
-              rel="noreferrer noopener"
-              className="inline font-medium text-blue-600 underline underline-offset-2 decoration-600 hover:no-underline"
-            >
-              new portfolio
-            </Link>
-            .
-          </span>
-        </p>
+      {/* Left Side */}
+      <div className="flex items-center text-white text-sm">
+        <img
+          src={bulb}
+          alt="bulb"
+          height={16}
+          width={16}
+          className="mr-2"
+        />
+        <span>Welcome to Our Portfolio</span>
       </div>
-      <div className="flex items-center">
-        <button
-          data-dismiss-target="#sticky-banner"
-          onClick={handleBannerClose}
-          type="button"
-          className="flex-shrink-0 inline-flex justify-center items-center text-gray-400 hover:bg-gray-800 rounded-lg text-sm p-1.5 "
-        >
-          <img src={close} alt="close" height={12} width={12} />
-          <span className="sr-only">Close banner</span>
-        </button>
-      </div>
+
+      {/* Right Side (Close Button) */}
+      <button
+        onClick={handleBannerClose}
+        type="button"
+        className="text-gray-300 hover:text-white p-1 rounded-md"
+      >
+        <img src={close} alt="close" height={14} width={14} />
+      </button>
     </div>
   );
 };

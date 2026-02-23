@@ -25,9 +25,10 @@ export const Hero = () => {
           <h1 className={cn(styles.heroHeadText, "text-white")}>
             Hi, We are <span className="text-[#915eff]">DWW</span>
           </h1>
+          <p>Dynamic Web Works, Where Tech Met Bussiness</p>
           <p className={cn(styles.heroSubText, "mt-2 text-white-100")}>
             We Develop Websites <br className="sm:block hidden" />
-              web applications, App's
+              web applications, Android Applications
           </p>
         </div>
       </div>

@@ -136,29 +136,29 @@ export const TECHNOLOGIES = [
 // Experiences
 export const EXPERIENCES = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
+    title: "React Native Developers",
+    company_name: "Chit Fund Mobile App | React Native",
     icon: starbucks,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "Dec 2025 - April 2026",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Built and deployed a production-ready cross-platform app for Android (Play Store) and iOS (App Store) using React Native.",
+      "Collaborated with designers and product managers to deliver a high-quality, responsive UI on both platforms.",
+      "Ensured cross-device compatibility and platform-specific optimizations.",
+      "Participated in code reviews and maintained clean, scalable code.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
+    title: "Web Application (React.js)",
+    company_name: "Manikya Chits – Web + Mobile Ecosystem",
     icon: tesla,
     iconBg: "#E6DEDD",
     date: "Jan 2021 - Feb 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed and maintained a responsive React.js website with cross-browser compatibility",
+      "Collaborated with designers and product managers to create high-quality user interfaces",
+      "Participated in code reviews and maintained clean, scalable code architecture",
+      "Implemented responsive, native-like UI with platform-specific optimizations",
     ],
   },
   {
