@@ -1,9 +1,8 @@
 import React from "react";
 import { Html, useProgress } from "@react-three/drei";
 
-// Loader while canvas (model) is loading
 const Loader = () => {
-  const { progress } = useProgress(); // use drei progress
+  const { progress } = useProgress(); 
 
   return (
     <Html>

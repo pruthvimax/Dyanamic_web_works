@@ -169,7 +169,7 @@ export const Contact = () => {
                 id="email"
                 value={form.email}
                 onChange={handleChange}
-                placeholder="your_mail_name@email.com"
+                placeholder="your_mail@email.com"
                 title="What's your email?"
                 disabled={loading}
                 aria-disabled={loading}
