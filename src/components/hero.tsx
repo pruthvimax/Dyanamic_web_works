@@ -28,7 +28,7 @@ export const Hero = () => {
           <p>Dynamic Web Works, Where Tech Met Bussiness</p>
           <p className={cn(styles.heroSubText, "mt-2 text-white-100")}>
             We Develop Websites <br className="sm:block hidden" />
-              web applications, Android Applications
+            web applications, Android Applications
           </p>
         </div>
       </div>

@@ -1,5 +1,5 @@
 // Contains components to be exported in other files
-// ! Don't remove anything from here
+
 
 import { About } from "./about";
 import {
