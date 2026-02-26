@@ -13,7 +13,9 @@ export const Contact = () => {
   const formRef = useRef<HTMLFormElement | null>(null);
   const [form, setForm] = useState({
     name: "",
-    email: "",
+    mobile: "",
+    address: "",
+    lookingFor: "",
     message: "",
   });
   const [loading, setLoading] = useState(false);
@@ -30,19 +32,23 @@ export const Contact = () => {
   // validate form on submit
   const validateForm = () => {
     // form fields
-    const { name, email, message } = form;
+    const { name, mobile, address, lookingFor, message } = form;
 
     type Current = {
       name: boolean;
-      email: boolean;
+      mobile: boolean;
+      address: boolean;
+      lookingFor: boolean;
       message: boolean;
     };
 
     // Error message
     const nameError = document.querySelector("#name-error")!;
-    const emailError = document.querySelector("#email-error")!;
+    const mobileError = document.querySelector("#mobile-error")!;
+    const addressError = document.querySelector("#address-error")!;
+    const lookingForError = document.querySelector("#lookingFor-error")!;
     const messageError = document.querySelector("#message-error")!;
-    const current: Current = { name: false, email: false, message: false };
+    const current: Current = { name: false, mobile: false, address: false, lookingFor: false, message: false };
 
     // validate name
     if (name.trim().length < 3) {
@@ -53,16 +59,31 @@ export const Contact = () => {
       current["name"] = true;
     }
 
-    const email_regex =
-      /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-    // valiate email
-    if (!email.trim().toLowerCase().match(email_regex)) {
-      emailError.classList.remove("hidden");
-      current["email"] = false;
+    // validate mobile (simple validation)
+    if (mobile.trim().length < 10) {
+      mobileError.classList.remove("hidden");
+      current["mobile"] = false;
     } else {
-      emailError.classList.add("hidden");
-      current["email"] = true;
+      mobileError.classList.add("hidden");
+      current["mobile"] = true;
+    }
+
+    // validate address
+    if (address.trim().length < 5) {
+      addressError.classList.remove("hidden");
+      current["address"] = false;
+    } else {
+      addressError.classList.add("hidden");
+      current["address"] = true;
+    }
+
+    // validate lookingFor
+    if (lookingFor.trim() === "") {
+      lookingForError.classList.remove("hidden");
+      current["lookingFor"] = false;
+    } else {
+      lookingForError.classList.add("hidden");
+      current["lookingFor"] = true;
     }
 
     // validate message
@@ -99,9 +120,11 @@ export const Contact = () => {
         {
           from_name: form.name,
           to_name: "DWW",
-          from_email: form.email.trim().toLowerCase(),
-          to_email: import.meta.env.VITE_APP_EMAILJS_RECIEVER,
+          mobile_number: form.mobile,
+          address: form.address,
+          looking_for: form.lookingFor,
           message: form.message,
+          to_email: import.meta.env.VITE_APP_EMAILJS_RECIEVER,
         },
         import.meta.env.VITE_APP_EMAILJS_KEY,
       )
@@ -115,7 +138,9 @@ export const Contact = () => {
         setLoading(false);
         setForm({
           name: "",
-          email: "",
+          mobile: "",
+          address: "",
+          lookingFor: "",
           message: "",
         });
       });
@@ -139,12 +164,11 @@ export const Contact = () => {
             className="mt-12 flex flex-col gap-8"
           >
             {/* Name */}
-            <label htmlFor="name" className="flex flex-col">
+            <label className="flex flex-col">
               <span className="text-white font-medium mb-4">Your Name*</span>
               <input
                 type="text"
                 name="name"
-                id="name"
                 value={form.name}
                 onChange={handleChange}
                 placeholder="Enter Your Name"
@@ -160,35 +184,75 @@ export const Contact = () => {
               </span>
             </label>
 
-            {/* Email */}
-            <label htmlFor="email" className="flex flex-col">
-              <span className="text-white font-medium mb-4">Your Email*</span>
+            {/* Mobile Number */}
+            <label className="flex flex-col">
+              <span className="text-white font-medium mb-4">Mobile Number*</span>
               <input
-                type="email"
-                name="email"
-                id="email"
-                value={form.email}
+                type="tel"
+                name="mobile"
+                value={form.mobile}
                 onChange={handleChange}
-                placeholder="your_mail@email.com"
-                title="What's your email?"
+                placeholder="Enter Your Mobile Number"
+                title="What's your mobile number?"
                 disabled={loading}
                 aria-disabled={loading}
                 className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium disabled:bg-tertiary/20 disabled:text-white/60"
               />
 
-              {/* Invalid Email */}
-              <span className="text-red-400 mt-2 hidden" id="email-error">
-                Invalid E-mail!
+              {/* Invalid Mobile */}
+              <span className="text-red-400 mt-2 hidden" id="mobile-error">
+                Invalid Mobile Number!
+              </span>
+            </label>
+
+            {/* Address */}
+            <label className="flex flex-col">
+              <span className="text-white font-medium mb-4">Address*</span>
+              <input
+                type="text"
+                name="address"
+                value={form.address}
+                onChange={handleChange}
+                placeholder="Enter Your Address"
+                title="What's your address?"
+                disabled={loading}
+                aria-disabled={loading}
+                className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium disabled:bg-tertiary/20 disabled:text-white/60"
+              />
+
+              {/* Invalid Address */}
+              <span className="text-red-400 mt-2 hidden" id="address-error">
+                Invalid Address!
+              </span>
+            </label>
+
+            {/* Looking For */}
+            <label className="flex flex-col">
+              <span className="text-white font-medium mb-4">Looking For*</span>
+              <input
+                type="text"
+                name="lookingFor"
+                value={form.lookingFor}
+                onChange={handleChange}
+                placeholder="Website/Application/Other Service"
+                title="What service are you looking for?"
+                disabled={loading}
+                aria-disabled={loading}
+                className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium disabled:bg-tertiary/20 disabled:text-white/60"
+              />
+
+              {/* Invalid Looking For */}
+              <span className="text-red-400 mt-2 hidden" id="lookingFor-error">
+                Invalid Selection!
               </span>
             </label>
 
             {/* Message */}
-            <label htmlFor="message" className="flex flex-col">
+            <label className="flex flex-col">
               <span className="text-white font-medium mb-4">Your Message*</span>
               <textarea
                 rows={7}
                 name="message"
-                id="message"
                 value={form.message}
                 onChange={handleChange}
                 placeholder="Hello there!"
