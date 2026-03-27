@@ -1,6 +1,8 @@
 // Contains constant data for using in website
 // ! Don't remove anything from here if not sure
-
+// Add this import at the top with other imports
+// Add this import with the other imports
+import appIcon from "../assets/company/appicon.png";
 import {
   mobile,
   backend,
@@ -20,6 +22,7 @@ import {
   docker,
   meta,
   starbucks,
+
   tesla,
   shopify,
   threejs,
@@ -138,7 +141,7 @@ export const EXPERIENCES = [
   {
     title: "React Native Developers",
     company_name: "Chit Fund Mobile App | React Native",
-    icon: starbucks,
+    icon: appIcon, // Changed from starbucks
     iconBg: "#383E56",
     date: "Dec 2025 - April 2026",
     points: [
@@ -188,171 +191,119 @@ export const EXPERIENCES = [
     ],
   },
 ] as const;
-
 // Testimonials
 export const TESTIMONIALS = [
   {
     testimonial:
       "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
+    name: "Mrs Sunitha",
     designation: "CFO",
-    company: "Acme Co",
+    company: "Ideal Manglore",
     image: user1,
   },
   {
     testimonial:
       "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
+    name: "Mr. Ram Hunsur",
+    designation: "Director",
+    company: "Manikya Chits",
     image: user2,
   },
   {
     testimonial:
       "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
+    name: "Anil",
     designation: "CTO",
-    company: "456 Enterprises",
+    company: "Studio",
     image: user3,
   },
 ] as const;
 
-// Projects
-export const PROJECTS = [
+// Replace the PROJECTS array with this:
+export const TEAM_MEMBERS = [
   {
-    name: "Disney+ Clone",
-    description:
-      "Disney+ is one of the biggest streaming platforms used by millions of people world-wide and allows us to stream high quality content in 4k and various other formats",
+    name: "Mr. Mohan Kumar",
+    description: "Managing Director of Manikya Chits Pvt Ltd, rapidly growing in chit fund business. Helping DWW with collecting customers and clients.",
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "firebase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
+      { name: "Leadership", color: "blue-text-gradient" },
+      { name: "Business Strategy", color: "green-text-gradient" },
+      { name: "Client Management", color: "pink-text-gradient" }
     ],
-    image: project1,
-   // source_code_link: "https://github.com/sanidhyy/disney-clone",
-    //live_site_link: "https://clonedisneyplus.web.app/",
+    image: "",
+    github_link: "https://github.com/mohankumar",
+    instagram_link: "https://instagram.com/mohankumar",
+    linkedin_link: "https://linkedin.com/in/mohankumar"
   },
   {
-    name: "Golds Gym",
-    description:
-      "Web application that enables users to search for fitness exercises, effective personalized positions, and recommends new exercises based on their personal preferences.",
+    name: "Mr. Ram Hunsur",
+    description: "Director of Manikya Chits. Helping DWW as a Contact Manager, handling client relationships and business development.",
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "rapidapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwindcss",
-        color: "pink-text-gradient",
-      },
+      { name: "Business Development", color: "blue-text-gradient" },
+      { name: "Client Relations", color: "green-text-gradient" },
+      { name: "Management", color: "pink-text-gradient" }
     ],
-    image: project2,
-    //source_code_link: "https://github.com/sanidhyy/fitness-app",
-    //live_site_link: "https://fitness-gym-react.netlify.app/",
+    image: "",
+    github_link: "https://github.com/ramhunsur",
+    instagram_link: "https://instagram.com/ramhunsur",
+    linkedin_link: "https://linkedin.com/in/ramhunsur"
   },
   {
-    name: "Shoppy",
-    description:
-      "The most personalised admin dashboard web application that allows enables users to choose customized themes and dark mode with different pages and variety of charts.",
+    name: "Harish Patil",
+    description: "Backend developer skilled in Python, Java, Node.js, and PHP. Pursuing 3rd year Engineering at St Joseph Engineering College, Mangalore.",
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "syncfusion",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
+      { name: "Python", color: "blue-text-gradient" },
+      { name: "Node.js", color: "green-text-gradient" },
+      { name: "Java", color: "pink-text-gradient" },
+      { name: "PHP", color: "blue-text-gradient" }
     ],
-    image: project3,
-   // source_code_link: "https://github.com/sanidhyy/admin-dashboard",
-    //live_site_link: "https://shoppy-dashboard-react.netlify.app/",
+    image: "",
+    github_link: "https://github.com/harishpatil",
+    instagram_link: "https://instagram.com/harishpatil",
+    linkedin_link: "https://linkedin.com/in/harishpatil"
   },
   {
-    name: "TikTok Clone",
-    description:
-      "A Next JS Web Application that enables users to upload videos of any length and size, create accounts and connect with other people just like any other social media.",
+    name: "Sharanya S",
+    description: "Frontend developer skilled in React, Vue.js, and Tailwind CSS. 3rd year CSE student at Srinivas Institute of Technology, Mangalore.",
     tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "nodejs",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwindcss",
-        color: "pink-text-gradient",
-      },
+      { name: "React", color: "blue-text-gradient" },
+      { name: "Vue.js", color: "green-text-gradient" },
+      { name: "Tailwind CSS", color: "pink-text-gradient" },
+      { name: "UI/UX", color: "blue-text-gradient" }
     ],
-    image: project4,
-    //source_code_link: "https://github.com/sanidhyy/tiktok-clone",
-   // live_site_link: "https://tiktok-clone-react.vercel.app/",
+    image: "",
+    github_link: "https://github.com/sharanya",
+    instagram_link: "https://instagram.com/sharanya",
+    linkedin_link: "https://linkedin.com/in/sharanya"
   },
   {
-    name: "Cryptoverse",
-    description:
-      "Best Cryptocurrency web application that allows users to view price, market cap and daily change in realtime for almost every cryptocurrency in the world.",
+    name: "Pruthvi G",
+    description: "Full-stack developer skilled in MERN stack and mobile apps. 3rd year Engineering student at St Joseph Engineering College, Mangalore.",
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "rapidapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
+      { name: "MERN Stack", color: "blue-text-gradient" },
+      { name: "React Native", color: "green-text-gradient" },
+      { name: "JavaScript", color: "pink-text-gradient" },
+      { name: "MongoDB", color: "blue-text-gradient" }
     ],
-    image: project5,
-   // source_code_link: "https://github.com/sanidhyy/crypto-app",
-   // live_site_link: "https://reactjscryptoapp.netlify.app/",
+    image: "",
+    github_link: "https://github.com/pruthvig",
+    instagram_link: "https://instagram.com/pruthvig",
+    linkedin_link: "https://linkedin.com/in/pruthvig"
   },
   {
-    name: "Travel Advisor",
-    description:
-      "Web application that enables you to view your nearby restaurants, hotels and attractions which can be sorted by ratings, price and much more.",
+    name: "Nithin H M",
+    description: "Research & Hardware Manager skilled in IoT and embedded systems. 3rd year Engineering student at St Joseph Engineering College, Mangalore.",
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "rapidapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "material-ui",
-        color: "pink-text-gradient",
-      },
+      { name: "IoT", color: "blue-text-gradient" },
+      { name: "Embedded Systems", color: "green-text-gradient" },
+      { name: "Hardware", color: "pink-text-gradient" },
+      { name: "Research", color: "blue-text-gradient" }
     ],
-    image: project6,
-    //source_code_link: "https://github.com/sanidhyy/travel-advisor",
-   // live_site_link: "https://travel-advisor-reactjs.netlify.app/",
-  },
-] as const;
-
+    image: "",
+    github_link: "https://github.com/nithinhm",
+    instagram_link: "https://instagram.com/nithinhm",
+    linkedin_link: "https://linkedin.com/in/nithinhm"
+  }
+];
 export const SOCIALS = [
   {
     name: "YouTube",
