@@ -8,20 +8,24 @@ dotenv.config();
 
 const app = express();
 
-// middleware
-app.use(cors());
+// ✅ CORS (only once)
+app.use(cors({
+  origin: "http://localhost:5173"
+}));
+
+// ✅ Middleware
 app.use(express.json());
 
-// routes
+// ✅ Routes
 app.use("/api/contact", contactRoutes);
 
-// connect DB
+// ✅ MongoDB Connection
 mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log("MongoDB Connected"))
-  .catch(err => console.log(err));
+  .then(() => console.log("✅ MongoDB Connected"))
+  .catch((err) => console.log("❌ DB Error:", err));
 
-// server
+// ✅ Server Start
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`🚀 Server running on port ${PORT}`);
 });

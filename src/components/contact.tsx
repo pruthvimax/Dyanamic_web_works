@@ -102,49 +102,60 @@ export const Contact = () => {
   };
 
   // handle form submit
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    // prevent default page reload
-    e.preventDefault();
+const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
 
-    // validate form
-    if (!validateForm()) return false;
+  if (!validateForm()) return;
 
-    // show loader
-    setLoading(true);
+  setLoading(true);
 
-    // send email
-    emailjs
-      .send(
-        import.meta.env.VITE_APP_SERVICE_ID,
-        import.meta.env.VITE_APP_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: "DWW",
-          mobile_number: form.mobile,
-          address: form.address,
-          looking_for: form.lookingFor,
-          message: form.message,
-          to_email: import.meta.env.VITE_APP_EMAILJS_RECIEVER,
-        },
-        import.meta.env.VITE_APP_EMAILJS_KEY,
-      )
-      .then(() => toast.success("Thanks for contacting me."))
-      .catch((error) => {
-        // Error handle
-        console.log("[CONTACT_ERROR]: ", error);
-        toast.error("Something went wrong.");
-      })
-      .finally(() => {
-        setLoading(false);
-        setForm({
-          name: "",
-          mobile: "",
-          address: "",
-          lookingFor: "",
-          message: "",
-        });
-      });
-  };
+  try {
+    // ✅ 1. Save to MongoDB (Backend)
+    await fetch("http://localhost:5000/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: form.name,
+        mobile: form.mobile,
+        address: form.address,
+        lookingFor: form.lookingFor,
+        message: form.message,
+      }),
+    });
+
+    // ✅ 2. Send Email (EmailJS)
+    await emailjs.send(
+      import.meta.env.VITE_APP_SERVICE_ID,
+      import.meta.env.VITE_APP_TEMPLATE_ID,
+      {
+        from_name: form.name,
+        to_name: "DWW",
+        mobile_number: form.mobile,
+        address: form.address,
+        looking_for: form.lookingFor,
+        message: form.message,
+        to_email: import.meta.env.VITE_APP_EMAILJS_RECIEVER,
+      },
+      import.meta.env.VITE_APP_EMAILJS_KEY
+    );
+
+    toast.success("Message sent & saved successfully 🚀");
+  } catch (error) {
+    console.log(error);
+    toast.error("Something went wrong ❌");
+  } finally {
+    setLoading(false);
+    setForm({
+      name: "",
+      mobile: "",
+      address: "",
+      lookingFor: "",
+      message: "",
+    });
+  }
+};
 
   return (
     <SectionWrapper idName="contact">
