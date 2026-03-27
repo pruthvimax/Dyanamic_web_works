@@ -11,44 +11,27 @@ type NavbarProps = {
 };
 
 export const Navbar = ({ hide }: NavbarProps) => {
-<<<<<<< Updated upstream
-  // state variables
-=======
->>>>>>> Stashed changes
   const [active, setActive] = useState("Home");
   const [toggle, setToggle] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-<<<<<<< Updated upstream
       if (window.scrollY > 10) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
       }
-=======
-      setIsAtBottom(window.scrollY > 10);
->>>>>>> Stashed changes
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-<<<<<<< Updated upstream
-  // Scroll to top
   const scrollToTop = () => {
     setActive("Home");
     window.scrollTo({ top: 0, behavior: "smooth" });
-    setToggle(false); // close mobile menu
-=======
-  // ✅ Smooth scroll to top (Home)
-  const handleHomeClick = () => {
-    setActive("Home");
     setToggle(false);
-    window.scrollTo({ top: 0, behavior: "smooth" });
->>>>>>> Stashed changes
   };
 
   return (
@@ -56,42 +39,32 @@ export const Navbar = ({ hide }: NavbarProps) => {
       className={cn(
         styles.paddingX,
         "w-full flex items-center py-5 fixed top-0 z-20 bg-primary transition-all duration-300",
-        isScrolled || hide 
-          ? "mt-0 shadow-lg shadow-purple-500/10 backdrop-blur-sm bg-primary/90" 
+        isScrolled || hide
+          ? "mt-0 shadow-lg shadow-purple-500/10 backdrop-blur-sm bg-primary/90"
           : "mt-20"
       )}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-<<<<<<< Updated upstream
+
         {/* Logo with hover effects */}
         <Link
           to="/"
           className="flex items-center gap-2 group"
           onClick={scrollToTop}
         >
-          <img 
-            src={logo} 
-            alt="Logo" 
-            className="w-9 h-9 object-contain transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 group-hover:drop-shadow-[0_0_8px_rgba(145,94,255,0.5)]" 
+          <img
+            src={logo}
+            alt="Logo"
+            className="w-9 h-9 object-contain transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 group-hover:drop-shadow-[0_0_8px_rgba(145,94,255,0.5)]"
           />
           <p className="text-white text-[18px] font-bold cursor-pointer flex transition-all duration-300 group-hover:tracking-wider group-hover:text-[#915eff]">
-=======
-        
-        {/* Logo */}
-        <div
-          className="flex items-center gap-2 cursor-pointer"
-          onClick={handleHomeClick}
-        >
-          <img src={logo} alt="Logo" className="w-9 h-9 object-contain" />
-          <p className="text-white text-[18px] font-bold flex">
->>>>>>> Stashed changes
             DWW&nbsp;<span className="sm:block hidden">| Developer's</span>
           </p>
-        </div>
+        </Link>
 
-<<<<<<< Updated upstream
-        {/* Nav Links (Desktop) with hover effects */}
+        {/* Nav Links (Desktop) */}
         <ul className="list-none hidden sm:flex flex-row gap-10">
+
           {/* Home Button */}
           <li
             className={cn(
@@ -100,26 +73,11 @@ export const Navbar = ({ hide }: NavbarProps) => {
               active === "Home" && "after:w-[70%]"
             )}
             onClick={scrollToTop}
-=======
-        {/* Desktop Menu */}
-        <ul className="list-none hidden sm:flex flex-row gap-10">
-          
-          {/* ✅ Home Button */}
-          <li
-            className={cn(
-              active === "Home" ? "text-white" : "text-secondary",
-              "hover:text-white text-[18px] font-medium cursor-pointer"
-            )}
-            onClick={handleHomeClick}
->>>>>>> Stashed changes
           >
             Home
           </li>
 
-<<<<<<< Updated upstream
-=======
           {/* Other Links */}
->>>>>>> Stashed changes
           {NAV_LINKS.map((link) => (
             <li
               key={link.id}
@@ -158,41 +116,27 @@ export const Navbar = ({ hide }: NavbarProps) => {
             onClick={() => setToggle(!toggle)}
           />
 
-          {/* Mobile Menu Dropdown with animations */}
+          {/* Mobile Menu Dropdown */}
           <div
             className={cn(
               !toggle ? "hidden" : "flex",
               "p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl flex-col animate-in slide-in-from-top-5 duration-300"
             )}
           >
-<<<<<<< Updated upstream
             <ul className="list-none flex justify-end items-start flex-col gap-4">
-              {/* Home Button */}
+
+              {/* Home Button Mobile */}
               <li
                 className={cn(
                   active === "Home" ? "text-white" : "text-secondary",
                   "font-poppins font-medium cursor-pointer text-[16px] transition-all duration-200 hover:text-white hover:translate-x-1"
                 )}
                 onClick={scrollToTop}
-=======
-            <ul className="list-none flex flex-col gap-4">
-
-              {/* ✅ Home Button Mobile */}
-              <li
-                className={cn(
-                  active === "Home" ? "text-white" : "text-secondary",
-                  "font-poppins font-medium cursor-pointer text-[16px]"
-                )}
-                onClick={handleHomeClick}
->>>>>>> Stashed changes
               >
                 Home
               </li>
 
-<<<<<<< Updated upstream
-=======
               {/* Other Links Mobile */}
->>>>>>> Stashed changes
               {NAV_LINKS.map((link) => (
                 <li
                   key={link.id}
@@ -201,10 +145,6 @@ export const Navbar = ({ hide }: NavbarProps) => {
                     "font-poppins font-medium cursor-pointer text-[16px] transition-all duration-200 hover:text-white hover:translate-x-1"
                   )}
                   onClick={() => {
-<<<<<<< Updated upstream
-                    !link.link && setActive(link.title);
-                    setToggle(false); // close menu after click
-=======
                     setActive(link.title);
                     setToggle(false);
 
@@ -212,7 +152,6 @@ export const Navbar = ({ hide }: NavbarProps) => {
                       const section = document.getElementById(link.id);
                       section?.scrollIntoView({ behavior: "smooth" });
                     }
->>>>>>> Stashed changes
                   }}
                 >
                   {link.link ? (
