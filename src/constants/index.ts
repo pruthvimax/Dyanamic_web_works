@@ -4,6 +4,8 @@
 // Add this import with the other imports
 import appIcon from "../assets/company/appicon.png";
 import Nithinpic from "../assets/Nithinpic.png";
+import girlpic from "../assets/girlpic.avif";
+
 import {
   mobile,
   backend,
@@ -271,7 +273,7 @@ export const TEAM_MEMBERS = [
       { name: "Tailwind CSS", color: "pink-text-gradient" },
       { name: "UI/UX", color: "blue-text-gradient" }
     ],
-    image: "",
+    image: girlpic,
     github_link: "https://github.com/sharanya",
     instagram_link: "https://instagram.com/sharanya",
     linkedin_link: "https://linkedin.com/in/sharanya"
