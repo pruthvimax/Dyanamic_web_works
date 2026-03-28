@@ -21,3 +21,8 @@ This is a full-stack web application that allows users to submit contact details
 - TypeScript
 - Tailwind CSS
 - Framer Motion
+---
+### Backend
+- Node.js
+- Express.js
+- Mongoose
