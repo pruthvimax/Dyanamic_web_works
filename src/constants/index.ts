@@ -243,7 +243,7 @@ export const TEAM_MEMBERS = [
       { name: "Client Relations", color: "green-text-gradient" },
       { name: "Management", color: "pink-text-gradient" }
     ],
-    image: "",
+    image: Nithinpic,
     github_link: "https://github.com/ramhunsur",
     instagram_link: "https://instagram.com/ramhunsur",
     linkedin_link: "https://linkedin.com/in/ramhunsur"
