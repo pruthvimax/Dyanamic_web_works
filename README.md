@@ -37,9 +37,19 @@ User → Form → Backend API → MongoDB
 
 ---
 
+📂 Project Structure
+Dynamic_web_works/
+│── frontend/
+│   ├── src/
+│   ├── components/
+│   ├── styles/
+│
+│── backend/
+│   ├── routes/
+│   ├── models/
+│   ├── server.js
+│
+│── README.md
+
 ## 🚀 Getting Started
 
-### 1. Clone the repository
-```bash
-git clone https://github.com/your-username/Dynamic_web_works.git
-cd Dynamic_web_works
