@@ -259,7 +259,7 @@ export const TEAM_MEMBERS = [
     image: "",
     github_link: "https://github.com/HarishPatil20",
     instagram_link: "https://www.instagram.com/harish__patil____?igsh=ZXFuaHU3NzVyOWox",
-    linkedin_link: "https://linkedin.com/in/harishpatil"
+    linkedin_link: "https://www.linkedin.com/in/harish-patil-668459350?utm_source=share_via&utm_content=profile&utm_medium=member_android"
   },
   {
     name: "Sharanya S",
