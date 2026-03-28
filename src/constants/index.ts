@@ -3,6 +3,7 @@
 // Add this import at the top with other imports
 // Add this import with the other imports
 import appIcon from "../assets/company/appicon.png";
+import Nithinpic from "../assets/Nithinpic.png";
 import {
   mobile,
   backend,
@@ -290,19 +291,19 @@ export const TEAM_MEMBERS = [
     linkedin_link: "https://linkedin.com/in/pruthvig"
   },
   {
-    name: "Nithin H M",
-    description: "Research & Hardware Manager skilled in IoT and embedded systems. 3rd year Engineering student at St Joseph Engineering College, Mangalore.",
-    tags: [
-      { name: "IoT", color: "blue-text-gradient" },
-      { name: "Embedded Systems", color: "green-text-gradient" },
-      { name: "Hardware", color: "pink-text-gradient" },
-      { name: "Research", color: "blue-text-gradient" }
-    ],
-    image: "",
-    github_link: "https://github.com/Nithin2129",
-    instagram_link: "https://www.instagram.com/nithin__.21?igsh=NDZuMXY0cjJvMmh3",
-    linkedin_link: "https://www.linkedin.com/in/nithin-h-m-0a022921a?utm_source=share_via&utm_content=profile&utm_medium=member_android"
-  }
+  name: "Nithin H M",
+  description: "Research & Hardware Manager skilled in IoT and embedded systems. 3rd year Engineering student at St Joseph Engineering College, Mangalore.",
+  tags: [
+    { name: "IoT", color: "blue-text-gradient" },
+    { name: "Embedded Systems", color: "green-text-gradient" },
+    { name: "Hardware", color: "pink-text-gradient" },
+    { name: "Research", color: "blue-text-gradient" }
+  ],
+  image: Nithinpic,
+  github_link: "https://github.com/Nithin2129",
+  instagram_link: "https://www.instagram.com/nithin__.21?igsh=NDZuMXY0cjJvMmh3",
+  linkedin_link: "https://www.linkedin.com/in/nithin-h-m-0a022921a?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+}
 ];
 export const SOCIALS = [
   {
