@@ -12,3 +12,12 @@ This is a full-stack web application that allows users to submit contact details
 - MongoDB Atlas integration
 - Email notifications via EmailJS
 - Smooth animations with Framer Motion
+---
+
+## 🧠 Tech Stack
+
+### Frontend
+- React (Vite)
+- TypeScript
+- Tailwind CSS
+- Framer Motion
