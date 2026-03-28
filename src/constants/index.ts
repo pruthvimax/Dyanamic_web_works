@@ -257,7 +257,7 @@ export const TEAM_MEMBERS = [
       { name: "PHP", color: "blue-text-gradient" }
     ],
     image: "",
-    github_link: "https://github.com/harishpatil",
+    github_link: "https://github.com/HarishPatil20",
     instagram_link: "https://www.instagram.com/harish__patil____?igsh=ZXFuaHU3NzVyOWox",
     linkedin_link: "https://linkedin.com/in/harishpatil"
   },
