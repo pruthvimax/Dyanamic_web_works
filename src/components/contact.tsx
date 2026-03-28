@@ -13,6 +13,7 @@ export const Contact = () => {
   const formRef = useRef<HTMLFormElement | null>(null);
   const [form, setForm] = useState({
     name: "",
+    email: "",  
     mobile: "",
     address: "",
     lookingFor: "",
@@ -149,6 +150,7 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     setLoading(false);
     setForm({
       name: "",
+      email:"",
       mobile: "",
       address: "",
       lookingFor: "",
