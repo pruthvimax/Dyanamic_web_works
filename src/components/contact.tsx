@@ -13,6 +13,7 @@ export const Contact = () => {
   const formRef = useRef<HTMLFormElement | null>(null);
   const [form, setForm] = useState({
     name: "",
+    email: "",  
     mobile: "",
     address: "",
     lookingFor: "",
@@ -102,49 +103,89 @@ export const Contact = () => {
   };
 
   // handle form submit
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    // prevent default page reload
-    e.preventDefault();
+const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
 
-    // validate form
-    if (!validateForm()) return false;
+  if (!validateForm()) return;
 
-    // show loader
-    setLoading(true);
+  setLoading(true);
 
-    // send email
-    emailjs
-      .send(
-        import.meta.env.VITE_APP_SERVICE_ID,
-        import.meta.env.VITE_APP_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: "DWW",
-          mobile_number: form.mobile,
-          address: form.address,
-          looking_for: form.lookingFor,
-          message: form.message,
-          to_email: import.meta.env.VITE_APP_EMAILJS_RECIEVER,
-        },
-        import.meta.env.VITE_APP_EMAILJS_KEY,
-      )
-      .then(() => toast.success("Thanks for contacting me."))
-      .catch((error) => {
-        // Error handle
-        console.log("[CONTACT_ERROR]: ", error);
-        toast.error("Something went wrong.");
-      })
-      .finally(() => {
-        setLoading(false);
-        setForm({
-          name: "",
-          mobile: "",
-          address: "",
-          lookingFor: "",
-          message: "",
-        });
-      });
-  };
+  try {
+    // ✅ 1. Save to MongoDB
+    await fetch("http://localhost:5000/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: form.name,
+        email: form.email,
+        mobile: form.mobile,
+        address: form.address,
+        lookingFor: form.lookingFor,
+        message: form.message,
+      }),
+    });
+
+    // ✅ 2. Send Email to YOU (Contact Template)
+    await emailjs.send(
+      import.meta.env.VITE_APP_SERVICE_ID,
+      "template_h121m65", // 👈 your Contact Us template
+      {
+        from_name: form.name,
+        from_email: form.email,
+        mobile_number: form.mobile,
+        address: form.address,
+        looking_for: form.lookingFor,
+        message: form.message,
+        to_email: import.meta.env.VITE_APP_EMAILJS_RECIEVER,
+      },
+      import.meta.env.VITE_APP_EMAILJS_KEY
+    );
+
+    // ✅ 3. Auto Reply to USER
+    await emailjs.send(
+      import.meta.env.VITE_APP_SERVICE_ID,
+      "template_f3hohfn", // 👈 your Auto Reply template
+      {
+        from_name: form.name,
+        from_email: form.email,
+        looking_for: form.lookingFor,
+      },
+      import.meta.env.VITE_APP_EMAILJS_KEY
+    );
+
+    // ✅ 4. WhatsApp Message
+    const phoneNumber = "919731975121"; 
+
+    const whatsappMessage = `New Contact:
+Name: ${form.name}
+Email: ${form.email}
+Mobile: ${form.mobile}
+Service: ${form.lookingFor}
+Message: ${form.message}`;
+
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(url, "_blank");
+
+    // ✅ Success
+    toast.success("Message sent successfully 🚀");
+
+  } catch (error) {
+    console.log(error);
+    toast.error("Something went wrong ❌");
+  } finally {
+    setLoading(false);
+    setForm({
+      name: "",
+      email: "",
+      mobile: "",
+      address: "",
+      lookingFor: "",
+      message: "",
+    });
+  }
+};
 
   return (
     <SectionWrapper idName="contact">
@@ -185,6 +226,17 @@ export const Contact = () => {
             </label>
 
             {/* Mobile Number */}
+            <label className="flex flex-col">
+              <span className="text-white font-medium mb-4">Email*</span>
+              <input
+                type="email"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
+                placeholder="Enter Your Email"
+                className="bg-tertiary py-4 px-6 text-white rounded-lg"
+              />
+            </label>
             <label className="flex flex-col">
               <span className="text-white font-medium mb-4">Mobile Number*</span>
               <input

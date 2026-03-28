@@ -2,7 +2,9 @@ import mongoose from "mongoose";
 
 const contactSchema = new mongoose.Schema({
   name: String,
-  email: String,
+  mobile: String,
+  address: String,
+  lookingFor: String,
   message: String,
 }, { timestamps: true });
 
