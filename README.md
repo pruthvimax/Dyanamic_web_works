@@ -31,3 +31,15 @@ This is a full-stack web application that allows users to submit contact details
 ### Database
 - MongoDB Atlas
 
+## 🔄 Workflow
+User → Form → Backend API → MongoDB  
+                              ↘ EmailJS
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/your-username/Dynamic_web_works.git
+cd Dynamic_web_works
