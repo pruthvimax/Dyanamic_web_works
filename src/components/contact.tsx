@@ -156,7 +156,7 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     );
 
     // ✅ 4. WhatsApp Message
-    const phoneNumber = "919731975121"; // 🔴 replace with your number
+    const phoneNumber = "919731975121"; 
 
     const whatsappMessage = `New Contact:
 Name: ${form.name}
