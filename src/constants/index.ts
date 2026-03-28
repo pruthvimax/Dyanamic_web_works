@@ -230,7 +230,7 @@ export const TEAM_MEMBERS = [
       { name: "Business Strategy", color: "green-text-gradient" },
       { name: "Client Management", color: "pink-text-gradient" }
     ],
-    image: "",
+    image: Nithinpic,
     github_link: "https://github.com/mohankumar",
     instagram_link: "https://instagram.com/mohankumar",
     linkedin_link: "https://linkedin.com/in/mohankumar"
