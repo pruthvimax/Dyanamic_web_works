@@ -111,7 +111,7 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
   setLoading(true);
 
   try {
-    // ✅ 1. Save to MongoDB (Backend)
+    // ✅ 1. Save to MongoDB
     await fetch("http://localhost:5000/api/contact", {
       method: "POST",
       headers: {
@@ -119,6 +119,7 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
       },
       body: JSON.stringify({
         name: form.name,
+        email: form.email,
         mobile: form.mobile,
         address: form.address,
         lookingFor: form.lookingFor,
@@ -126,13 +127,13 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
       }),
     });
 
-    // ✅ 2. Send Email (EmailJS)
+    // ✅ 2. Send Email to YOU (Contact Template)
     await emailjs.send(
       import.meta.env.VITE_APP_SERVICE_ID,
-      import.meta.env.VITE_APP_TEMPLATE_ID,
+      "template_h121m65", // 👈 your Contact Us template
       {
         from_name: form.name,
-        to_name: "DWW",
+        from_email: form.email,
         mobile_number: form.mobile,
         address: form.address,
         looking_for: form.lookingFor,
@@ -142,7 +143,34 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
       import.meta.env.VITE_APP_EMAILJS_KEY
     );
 
-    toast.success("Message sent & saved successfully 🚀");
+    // ✅ 3. Auto Reply to USER
+    await emailjs.send(
+      import.meta.env.VITE_APP_SERVICE_ID,
+      "template_f3hohfn", // 👈 your Auto Reply template
+      {
+        from_name: form.name,
+        from_email: form.email,
+        looking_for: form.lookingFor,
+      },
+      import.meta.env.VITE_APP_EMAILJS_KEY
+    );
+
+    // ✅ 4. WhatsApp Message
+    const phoneNumber = "919731975121"; // 🔴 replace with your number
+
+    const whatsappMessage = `New Contact:
+Name: ${form.name}
+Email: ${form.email}
+Mobile: ${form.mobile}
+Service: ${form.lookingFor}
+Message: ${form.message}`;
+
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(url, "_blank");
+
+    // ✅ Success
+    toast.success("Message sent successfully 🚀");
+
   } catch (error) {
     console.log(error);
     toast.error("Something went wrong ❌");
@@ -150,7 +178,7 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     setLoading(false);
     setForm({
       name: "",
-      email:"",
+      email: "",
       mobile: "",
       address: "",
       lookingFor: "",
@@ -198,6 +226,17 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
             </label>
 
             {/* Mobile Number */}
+            <label className="flex flex-col">
+              <span className="text-white font-medium mb-4">Email*</span>
+              <input
+                type="email"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
+                placeholder="Enter Your Email"
+                className="bg-tertiary py-4 px-6 text-white rounded-lg"
+              />
+            </label>
             <label className="flex flex-col">
               <span className="text-white font-medium mb-4">Mobile Number*</span>
               <input
