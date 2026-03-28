@@ -258,7 +258,7 @@ export const TEAM_MEMBERS = [
     ],
     image: "",
     github_link: "https://github.com/harishpatil",
-    instagram_link: "https://instagram.com/harishpatil",
+    instagram_link: "https://www.instagram.com/harish__patil____?igsh=ZXFuaHU3NzVyOWox",
     linkedin_link: "https://linkedin.com/in/harishpatil"
   },
   {
