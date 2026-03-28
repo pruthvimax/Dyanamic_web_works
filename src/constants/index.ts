@@ -299,9 +299,9 @@ export const TEAM_MEMBERS = [
       { name: "Research", color: "blue-text-gradient" }
     ],
     image: "",
-    github_link: "https://github.com/nithinhm",
-    instagram_link: "https://instagram.com/nithinhm",
-    linkedin_link: "https://linkedin.com/in/nithinhm"
+    github_link: "https://github.com/Nithin2129",
+    instagram_link: "https://www.instagram.com/nithin__.21?igsh=NDZuMXY0cjJvMmh3",
+    linkedin_link: "https://www.linkedin.com/in/nithin-h-m-0a022921a?utm_source=share_via&utm_content=profile&utm_medium=member_android"
   }
 ];
 export const SOCIALS = [
