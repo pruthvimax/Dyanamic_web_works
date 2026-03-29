@@ -275,7 +275,7 @@ export const TEAM_MEMBERS = [
   ],
   image: girlpic,
   github_link: "github.com/sharanyashree",
-  instagram_link: "www.instagram.com/helloamimax?igsh=YjR6M2dmbjhnajd1",
+  instagram_link: "https://www.instagram.com/helloamimax/?utm_source=ig_web_button_share_sheet",
   linkedin_link: "www.linkedin.com/in/sharanya-s-9648b732b"
   },
   {
