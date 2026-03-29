@@ -274,7 +274,7 @@ export const TEAM_MEMBERS = [
     { name: "UI/UX", color: "blue-text-gradient" }
   ],
   image: girlpic,
-  github_link: "https://github.com/sharanya",
+  github_link: "github.com/sharanyashree",
   instagram_link: "https://instagram.com/sharanya",
   linkedin_link: "https://linkedin.com/in/sharanya"
   },
