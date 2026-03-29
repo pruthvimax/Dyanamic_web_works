@@ -233,7 +233,7 @@ export const TEAM_MEMBERS = [
       { name: "Client Management", color: "pink-text-gradient" }
     ],
     image: Nithinpic,
-    github_link: "https://github.com/mohankumar",
+    github_link: "https://github.com/manikyachitsprivatelimited-design",
     instagram_link: "https://www.instagram.com/manikya_chits_pvt_limited?igsh=MXA1NThrcWIxZ2VnYg==",
     linkedin_link: "https://linkedin.com/in/mohankumar"
   },
@@ -246,7 +246,7 @@ export const TEAM_MEMBERS = [
       { name: "Management", color: "pink-text-gradient" }
     ],
     image: Nithinpic,
-    github_link: "https://github.com/ramhunsur",
+    github_link: "https://github.com/manikyachitsprivatelimited-design",
     instagram_link: "https://www.instagram.com/manikya_chits_pvt_limited?igsh=MXA1NThrcWIxZ2VnYg==",
     linkedin_link: "https://linkedin.com/in/ramhunsur"
   },
