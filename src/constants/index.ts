@@ -235,7 +235,7 @@ export const TEAM_MEMBERS = [
     image: Nithinpic,
     github_link: "https://github.com/manikyachitsprivatelimited-design",
     instagram_link: "https://www.instagram.com/manikya_chits_pvt_limited?igsh=MXA1NThrcWIxZ2VnYg==",
-    linkedin_link: "https://linkedin.com/in/mohankumar"
+    linkedin_link: "https://www.linkedin.com/in/manikya-chits-private-limited-sagara-8408923b0"
   },
   {
     name: "Mr. Ram Hunsur",
@@ -248,7 +248,7 @@ export const TEAM_MEMBERS = [
     image: Nithinpic,
     github_link: "https://github.com/manikyachitsprivatelimited-design",
     instagram_link: "https://www.instagram.com/manikya_chits_pvt_limited?igsh=MXA1NThrcWIxZ2VnYg==",
-    linkedin_link: "https://linkedin.com/in/ramhunsur"
+    linkedin_link: "https://www.linkedin.com/in/manikya-chits-private-limited-sagara-8408923b0"
   },
   {
   name: "Harish Patil",
