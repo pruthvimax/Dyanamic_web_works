@@ -289,7 +289,7 @@ export const TEAM_MEMBERS = [
     image: Nithinpic,
     github_link: "https://github.com/pruthvimax",
     instagram_link: "https://www.instagram.com/pruthvee_0106?igsh=MXV6d29heWJvejc4ag==",
-    linkedin_link: "https://linkedin.com/in/pruthvig"
+    linkedin_link: "www.linkedin.com/in/pruthvi-g-1b23b52aa"
   },
   {
   name: "Nithin H M",
