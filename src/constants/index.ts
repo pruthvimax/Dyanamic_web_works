@@ -275,7 +275,7 @@ export const TEAM_MEMBERS = [
   ],
   image: girlpic,
   github_link: "github.com/sharanyashree",
-  instagram_link: "https://instagram.com/sharanya",
+  instagram_link: "www.linkedin.com/in/sharanya-s-9648b732b",
   linkedin_link: "https://linkedin.com/in/sharanya"
   },
   {
