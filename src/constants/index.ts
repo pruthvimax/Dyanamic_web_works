@@ -280,8 +280,7 @@ export const TEAM_MEMBERS = [
   },
   {
     name: "Pruthvi G",
-    description: "Full-stack developer skilled in MERN stack and mobile apps. 3rd year Engineering student at St Joseph Engineering College, Mangalore.",
-    tags: [
+    description: "Full-stack developer skilled in MERN stack and mobile apps. Currently working remotely in full-stack development and mobile application projects.",    tags: [
       { name: "MERN Stack", color: "blue-text-gradient" },
       { name: "React Native", color: "green-text-gradient" },
       { name: "JavaScript", color: "pink-text-gradient" },
