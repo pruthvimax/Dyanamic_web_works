@@ -273,7 +273,7 @@ export const TEAM_MEMBERS = [
     { name: "Tailwind CSS", color: "pink-text-gradient" },
     { name: "UI/UX", color: "blue-text-gradient" }
   ],
-  image: SharanyaPic,
+  image: girlpic,
   github_link: "https://github.com/sharanya",
   instagram_link: "https://instagram.com/sharanya",
   linkedin_link: "https://linkedin.com/in/sharanya"
