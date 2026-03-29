@@ -294,7 +294,7 @@ export const TEAM_MEMBERS = [
   },
   {
   name: "Nithin H M",
-  description: "Research & Hardware Manager skilled in IoT and embedded systems. 3rd year Engineering student at St Joseph Engineering College, Mangalore.",
+  description: "Research & Hardware Manager skilled in IoT and embedded systems. Currently working remotely in hardware research and embedded systems development.",
   tags: [
     { name: "IoT", color: "blue-text-gradient" },
     { name: "Embedded Systems", color: "green-text-gradient" },
