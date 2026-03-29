@@ -266,7 +266,7 @@ export const TEAM_MEMBERS = [
   },
   {
   name: "Sharanya S",
-  description: "Frontend developer skilled in React, Vue.js, and Tailwind CSS. Currently working remotely in frontend development and UI/UX design.",
+  description: "Frontend developer skilled in React, Vue.js, and Tailwind CSS. Currently working at CreativePixel Studio on frontend development and UI/UX design. Responsive Design Specialist.",
   tags: [
     { name: "React", color: "blue-text-gradient" },
     { name: "Vue.js", color: "green-text-gradient" },
