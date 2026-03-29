@@ -276,7 +276,7 @@ export const TEAM_MEMBERS = [
   image: girlpic,
   github_link: "https://github.com/sharanyashree",
   instagram_link: "https://www.instagram.com/helloamimax/?utm_source=ig_web_button_share_sheet",
-  linkedin_link: "www.linkedin.com/in/sharanya-s-9648b732b"
+  linkedin_link: "https://www.linkedin.com/in/sharanya-s-9648b732b?utm_source=share_via&utm_content=profile&utm_medium=member_android"
   },
   {
     name: "Pruthvi G",
