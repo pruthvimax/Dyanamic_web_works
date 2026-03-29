@@ -263,20 +263,20 @@ export const TEAM_MEMBERS = [
   github_link: "https://github.com/HarishPatil20",
   instagram_link: "https://www.instagram.com/harish__patil____?igsh=ZXFuaHU3NzVyOWox",
   linkedin_link: "https://www.linkedin.com/in/harish-patil-668459350?utm_source=share_via&utm_content=profile&utm_medium=member_android"
-},
+  },
   {
-    name: "Sharanya S",
-    description: "Frontend developer skilled in React, Vue.js, and Tailwind CSS. 3rd year CSE student at Srinivas Institute of Technology, Mangalore.",
-    tags: [
-      { name: "React", color: "blue-text-gradient" },
-      { name: "Vue.js", color: "green-text-gradient" },
-      { name: "Tailwind CSS", color: "pink-text-gradient" },
-      { name: "UI/UX", color: "blue-text-gradient" }
-    ],
-    image: girlpic,
-    github_link: "https://github.com/sharanya",
-    instagram_link: "https://instagram.com/sharanya",
-    linkedin_link: "https://linkedin.com/in/sharanya"
+  name: "Sharanya S",
+  description: "Frontend developer skilled in React, Vue.js, and Tailwind CSS. Currently working remotely in frontend development and UI/UX design.",
+  tags: [
+    { name: "React", color: "blue-text-gradient" },
+    { name: "Vue.js", color: "green-text-gradient" },
+    { name: "Tailwind CSS", color: "pink-text-gradient" },
+    { name: "UI/UX", color: "blue-text-gradient" }
+  ],
+  image: SharanyaPic,
+  github_link: "https://github.com/sharanya",
+  instagram_link: "https://instagram.com/sharanya",
+  linkedin_link: "https://linkedin.com/in/sharanya"
   },
   {
     name: "Pruthvi G",
