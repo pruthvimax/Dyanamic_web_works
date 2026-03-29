@@ -234,7 +234,7 @@ export const TEAM_MEMBERS = [
     ],
     image: Nithinpic,
     github_link: "https://github.com/mohankumar",
-    instagram_link: "https://instagram.com/mohankumar",
+    instagram_link: "https://www.instagram.com/manikya_chits_pvt_limited?igsh=MXA1NThrcWIxZ2VnYg==",
     linkedin_link: "https://linkedin.com/in/mohankumar"
   },
   {
@@ -247,7 +247,7 @@ export const TEAM_MEMBERS = [
     ],
     image: Nithinpic,
     github_link: "https://github.com/ramhunsur",
-    instagram_link: "https://instagram.com/ramhunsur",
+    instagram_link: "https://www.instagram.com/manikya_chits_pvt_limited?igsh=MXA1NThrcWIxZ2VnYg==",
     linkedin_link: "https://linkedin.com/in/ramhunsur"
   },
   {
