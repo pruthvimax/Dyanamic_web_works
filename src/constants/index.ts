@@ -252,7 +252,7 @@ export const TEAM_MEMBERS = [
   },
   {
     name: "Harish Patil",
-    description: "Backend developer skilled in Python, Java, Node.js, and PHP. Pursuing 3rd year Engineering at St Joseph Engineering College, Mangalore.",
+    description: "Backend developer skilled in Python, Java, Node.js, and PHP. Currently working at TechNova Solutions on backend development and server-side applications."
     tags: [
       { name: "Python", color: "blue-text-gradient" },
       { name: "Node.js", color: "green-text-gradient" },
