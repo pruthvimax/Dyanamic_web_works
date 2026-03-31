@@ -1,7 +1,7 @@
 # 🚀 Dynamic Web Works 
 
 ## 📌 Overview
-This is a full-stack web application that allows users to submit contact details through a modern UI. The data is processed by a backend server and stored in MongoDB Atlas, with email notifications sent using EmailJS.
+This is a full-stack web application that allows users to submit contact details through a modern UI. The data is processed by a backend server and stored in MongoDB Atlas, with email notifications sent
 
 ---
 
