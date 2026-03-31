@@ -10,7 +10,7 @@ This is a full-stack web application that allows users to submit contact details
 - Form validation
 - Backend API with Express.js
 - MongoDB Atlas integration
-- Email notifications via EmailJS
+- Email notifications 
 - Smooth animations with Framer Motion
 ---
 
